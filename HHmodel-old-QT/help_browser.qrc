@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/help">
+        <file>doc/index.htm</file>
+        <file>doc/about_model.html</file>
+        <file>doc/about_nanimo.html</file>
+        <file>doc/about_parameters.html</file>
+        <file>doc/about_programm.html</file>
+        <file>doc/scheme.png</file>
+        <file>doc/1.png</file>
+        <file>doc/2.png</file>
+        <file>doc/3.png</file>
+        <file>doc/4.png</file>
+        <file>doc/5.png</file>
+        <file>doc/6.png</file>
+        <file>doc/7.png</file>
+        <file>doc/8.png</file>
+        <file>doc/9.png</file>
+    </qresource>
+</RCC>

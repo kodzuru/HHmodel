@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/cur">
+        <file>076-512.png</file>
+    </qresource>
+</RCC>

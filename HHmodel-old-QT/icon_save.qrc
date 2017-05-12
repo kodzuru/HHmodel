@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/save">
+        <file>Treetog-I-Floppy-Small.ico</file>
+    </qresource>
+</RCC>
