@@ -1,9 +1,4 @@
 #pragma once
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <fstream>
-#include <cmath>
 
 
 class HH_model_class
@@ -21,17 +16,16 @@ private:
 
 	//--------------------------------------
 	//return result variables
-	std::vector<std::vector<double> > result_full;
 	std::vector<double> result_vi;
 	std::vector<double> result_n;
 	std::vector<double> result_m;
 	std::vector<double> result_h;
 
+
 	std::vector<double> result_current_K;
 	std::vector<double> result_current_Na;
 	std::vector<double> result_current_L;
 	std::vector<double> result_current_sum;
-	std::vector<std::vector<double> > result_current_full;
 
 
 
@@ -53,6 +47,7 @@ private:
 	void calculate_result_current_sum();
 
 
+
 public:
 	//using DataType_vec_d = std::vector<double>;
 	HH_model_class(std::vector<double>&, std::vector<double>&, std::vector<int>&);
@@ -61,7 +56,6 @@ public:
 	std::vector<double> return_result_n() const;
 	std::vector<double> return_result_m() const;
 	std::vector<double> return_result_h() const;
-	//std::vector<std::vector<double> > return_result_full() const;
 
 	std::vector<double> return_result_current_K() const;
 	std::vector<double> return_result_current_Na() const;

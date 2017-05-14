@@ -1,4 +1,5 @@
 #include "HH_model_class.h"
+#include "stdafx.h"
 
 
 
@@ -12,15 +13,12 @@ HH_model_class::HH_model_class(
 	
 
 	ODE_solver(0, parameters[10], start_point, parameters[11]);
-	result_full.emplace_back(result_vi);
-	result_full.emplace_back(result_n);
-	result_full.emplace_back(result_m);
-	result_full.emplace_back(result_h);
 
 	calculate_result_current_K();
 	calculate_result_current_Na();
 	calculate_result_current_L();
 	calculate_result_current_sum();
+
 
 
 }
@@ -155,13 +153,8 @@ std::vector<double> HH_model_class::return_result_h() const
 {
 	return result_h;
 }
-//return vector of full values
-/*
-std::vector<std::vector<double> > HH_model_class::return_result_full() const
-{
-	return result_full;
-}
-*/
+
+
 
 double HH_model_class::ODE_error_mean()
 //error of runge-kutte method

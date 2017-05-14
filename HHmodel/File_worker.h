@@ -1,12 +1,5 @@
 #pragma once
-#pragma warning(disable : 4996) //_CRT_SECURE_NO_WARNINGS
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <vector>
-#include <string>
-#include <time.h>
-#include <map>
+
 
 class File_worker
 /*
@@ -44,6 +37,7 @@ public:
 	bool save_to_file(std::vector<std::vector<double> >&, const std::string&);
 	bool write_settings();
 	bool save_parameters_to_file(const std::map<std::string, double>&, const std::string&) const;
+
 
 };
 

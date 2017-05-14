@@ -1,4 +1,6 @@
 #include "File_worker.h"
+#include "stdafx.h"
+#pragma warning(disable : 4996) //_CRT_SECURE_NO_WARNINGS
 
 
 
@@ -20,13 +22,7 @@ void File_worker::read_settings()
 	char ch{};
 	double value{};
 	while (file_settings_input >> option >> ch >> value) { //read line as line file
-		options_map.insert(std::pair<std::string, settings>(option, settings{ option ,ch,	value }));
-		/*
-		for (auto it = options_map.begin(); it != options_map.end(); ++it)
-		{
-			std::cout << (*it).first << " : " << (*it).second.option_value << std::endl;
-		}
-		*/
+		options_map.insert(std::pair<std::string, settings>(option, settings{ option ,ch,	value }));		
 	}
 }
 
@@ -54,7 +50,7 @@ bool File_worker::save_to_file(std::vector<std::vector<double> >& result_full, c
 	tm *tk;
 	time(&t);
 	tk = localtime(&t);
-	std::cout << 1900 + tk->tm_year << 1 + tk->tm_mon << tk->tm_mday << std::endl;
+	//std::cout << 1900 + tk->tm_year << 1 + tk->tm_mon << tk->tm_mday << std::endl;
 
 	//generate filename
 	std::string filename_output{
@@ -96,7 +92,7 @@ bool File_worker::save_parameters_to_file(const std::map<std::string, double>& i
 	tm *tk;
 	time(&t);
 	tk = localtime(&t);
-	std::cout << 1900 + tk->tm_year << 1 + tk->tm_mon << tk->tm_mday << std::endl;
+	//std::cout << 1900 + tk->tm_year << 1 + tk->tm_mon << tk->tm_mday << std::endl;
 
 	//generate filename
 	std::string filename_output{
@@ -112,6 +108,7 @@ bool File_worker::save_parameters_to_file(const std::map<std::string, double>& i
 		{
 			fout << (*it).first << " = " << (*it).second << "\n";
 		}
+		std::cout << filename_output << "  success !!!" << std::endl;
 		return true;
 	}
 	return false;
